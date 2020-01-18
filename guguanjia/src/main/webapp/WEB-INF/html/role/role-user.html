@@ -1,0 +1,805 @@
+<!-- 头部 -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <base href="/guguanjia/">
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>固管家服务平台</title>
+    <meta name="description" content="index"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="static/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/chosen/chosen.min.css"/>
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="static/ace/css/ace.min.css" id="main-ace-style"/>
+    <link rel="stylesheet" href="static/ace/css/ace-skins.min.css"/>
+    <link rel="stylesheet" href="static/ace/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="static/ztree/metro.css"/>
+    <link rel="stylesheet" href="static/validate/css/validform.css"/>
+    <link rel="stylesheet" href="static/css/custom.css"/>
+
+    <!--[if !IE]> -->
+    <script src="static/jquery/jquery.js"></script>
+    <!-- <![endif]-->
+    <!-- ace settings handler -->
+    <script src="static/ace/js/ace-extra.min.js"></script>
+</head>
+
+<body class="no-skin" id="body-content">
+
+<!-- 主体 -->
+<div class="main-container" id="main-container">
+
+
+    <div class="main-content">
+
+        <div class="page-content">
+
+            <div class="page-header">
+                <h1> 测试运输方普通人员 角色分配 </h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="fill-main-content" style="height:100%">
+                        <h3 class="header smaller red">通过选择部门，然后为列出部门的人员分配角色</h3>
+                        <div class="col-xs-6 col-sm-4 pricing-box">
+                            <div class="widget-box widget-color-orange">
+                                <div class="widget-header">
+                                    <h5 class="widget-title bigger lighter">所在部门</h5>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <ul class="ztree" id="treeOffice">
+                                            <li id="treeOffice_1" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_1_switch" title=""
+                                                                  class="button level0 switch roots_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_1_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="新注册用户默认机构"><span
+                                                    id="treeOffice_1_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_1_span">新注册用户默认机构</span></a></li>
+                                            <li id="treeOffice_2" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_2_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_2_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆天志环保有限公司（长寿处置场）"><span
+                                                    id="treeOffice_2_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_2_span">重庆天志环保有限公司（长寿处置场）</span></a></li>
+                                            <li id="treeOffice_3" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_3_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_3_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆天志环保有限公司（主城区处置场）"><span
+                                                    id="treeOffice_3_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_3_span">重庆天志环保有限公司（主城区处置场）</span></a></li>
+                                            <li id="treeOffice_4" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_4_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_4_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市万州区森浩污染物处置有限公司"><span
+                                                    id="treeOffice_4_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_4_span">重庆市万州区森浩污染物处置有限公司</span></a></li>
+                                            <li id="treeOffice_5" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_5_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_5_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆同兴医疗废物处理有限公司"><span
+                                                    id="treeOffice_5_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_5_span">重庆同兴医疗废物处理有限公司</span></a></li>
+                                            <li id="treeOffice_6" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_6_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_6_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市涪陵固体废物处理中心"><span
+                                                    id="treeOffice_6_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_6_span">重庆市涪陵固体废物处理中心</span></a></li>
+                                            <li id="treeOffice_7" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_7_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_7_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆华维实业有限责任公司"><span
+                                                    id="treeOffice_7_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_7_span">重庆华维实业有限责任公司</span></a></li>
+                                            <li id="treeOffice_8" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_8_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_8_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆宏源实业有限公司"><span
+                                                    id="treeOffice_8_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_8_span">重庆宏源实业有限公司</span></a></li>
+                                            <li id="treeOffice_9" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_9_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_9_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆龙健金属制造有限公司"><span
+                                                    id="treeOffice_9_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_9_span">重庆龙健金属制造有限公司</span></a></li>
+                                            <li id="treeOffice_10" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_10_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_10_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市利特环保工程有限公司（德感）"><span
+                                                    id="treeOffice_10_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_10_span">重庆市利特环保工程有限公司（德感）</span></a></li>
+                                            <li id="treeOffice_11" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_11_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_11_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市利特环保工程有限公司（黑石子）"><span
+                                                    id="treeOffice_11_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_11_span">重庆市利特环保工程有限公司（黑石子）</span></a></li>
+                                            <li id="treeOffice_12" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_12_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_12_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市长锦物资有限公司"><span
+                                                    id="treeOffice_12_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_12_span">重庆市长锦物资有限公司</span></a></li>
+                                            <li id="treeOffice_13" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_13_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_13_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市中明环境治理有限公司"><span
+                                                    id="treeOffice_13_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_13_span">重庆市中明环境治理有限公司</span></a></li>
+                                            <li id="treeOffice_14" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_14_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_14_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆宇立金属制品有限公司"><span
+                                                    id="treeOffice_14_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_14_span">重庆宇立金属制品有限公司</span></a></li>
+                                            <li id="treeOffice_15" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_15_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_15_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市固体废物管理服务中心"><span
+                                                    id="treeOffice_15_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_15_span">重庆市固体废物管理服务中心</span></a></li>
+                                            <li id="treeOffice_16" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_16_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_16_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆岭欧环保科技有限公司"><span
+                                                    id="treeOffice_16_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_16_span">重庆岭欧环保科技有限公司</span></a></li>
+                                            <li id="treeOffice_17" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_17_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_17_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆正艾敏再生资源回收有限公司"><span
+                                                    id="treeOffice_17_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_17_span">重庆正艾敏再生资源回收有限公司</span></a></li>
+                                            <li id="treeOffice_18" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_18_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_18_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="开县城市固体废弃物综合处理厂"><span
+                                                    id="treeOffice_18_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_18_span">开县城市固体废弃物综合处理厂</span></a></li>
+                                            <li id="treeOffice_19" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_19_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_19_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="酉阳县钦晟贵金属有限公司"><span
+                                                    id="treeOffice_19_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_19_span">酉阳县钦晟贵金属有限公司</span></a></li>
+                                            <li id="treeOffice_20" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_20_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_20_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆龙瑞化工有限公司"><span
+                                                    id="treeOffice_20_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_20_span">重庆龙瑞化工有限公司</span></a></li>
+                                            <li id="treeOffice_21" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_21_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_21_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆环创固体废物处置有限公司"><span
+                                                    id="treeOffice_21_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_21_span">重庆环创固体废物处置有限公司</span></a></li>
+                                            <li id="treeOffice_22" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_22_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_22_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆可厚德环保技术有限公司"><span
+                                                    id="treeOffice_22_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_22_span">重庆可厚德环保技术有限公司</span></a></li>
+                                            <li id="treeOffice_23" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_23_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_23_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆嘉惠环保科技有限公司"><span
+                                                    id="treeOffice_23_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_23_span">重庆嘉惠环保科技有限公司</span></a></li>
+                                            <li id="treeOffice_24" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_24_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_24_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆宏锐环保科技发展有限公司"><span
+                                                    id="treeOffice_24_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_24_span">重庆宏锐环保科技发展有限公司</span></a></li>
+                                            <li id="treeOffice_25" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_25_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_25_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆德能再生资源股份有限公司"><span
+                                                    id="treeOffice_25_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_25_span">重庆德能再生资源股份有限公司</span></a></li>
+                                            <li id="treeOffice_26" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_26_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_26_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="精永再生资源回收(重庆)有限公司"><span
+                                                    id="treeOffice_26_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_26_span">精永再生资源回收(重庆)有限公司</span></a></li>
+                                            <li id="treeOffice_27" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_27_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_27_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="忠县铭荣医疗废物处理有限公司"><span
+                                                    id="treeOffice_27_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_27_span">忠县铭荣医疗废物处理有限公司</span></a></li>
+                                            <li id="treeOffice_28" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_28_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_28_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆恒杰化工有限公司"><span
+                                                    id="treeOffice_28_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_28_span">重庆恒杰化工有限公司</span></a></li>
+                                            <li id="treeOffice_29" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_29_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_29_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="秀山县友鑫环境治理有限公司"><span
+                                                    id="treeOffice_29_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_29_span">秀山县友鑫环境治理有限公司</span></a></li>
+                                            <li id="treeOffice_30" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_30_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_30_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆蓝洁广顺净水材料有限公司"><span
+                                                    id="treeOffice_30_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_30_span">重庆蓝洁广顺净水材料有限公司</span></a></li>
+                                            <li id="treeOffice_31" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_31_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_31_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆凯怡贵金属有限公司"><span
+                                                    id="treeOffice_31_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_31_span">重庆凯怡贵金属有限公司</span></a></li>
+                                            <li id="treeOffice_32" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_32_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_32_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆东进世美肯电子材料有限公司"><span
+                                                    id="treeOffice_32_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_32_span">重庆东进世美肯电子材料有限公司</span></a></li>
+                                            <li id="treeOffice_33" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_33_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_33_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆伟世鑫盛环保科技有限公司"><span
+                                                    id="treeOffice_33_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_33_span">重庆伟世鑫盛环保科技有限公司</span></a></li>
+                                            <li id="treeOffice_34" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_34_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_34_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆炬缘环保有限公司"><span
+                                                    id="treeOffice_34_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_34_span">重庆炬缘环保有限公司</span></a></li>
+                                            <li id="treeOffice_35" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_35_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_35_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆万博再生资源利用有限公司"><span
+                                                    id="treeOffice_35_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_35_span">重庆万博再生资源利用有限公司</span></a></li>
+                                            <li id="treeOffice_36" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_36_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_36_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆中明港桥环保有限责任公司"><span
+                                                    id="treeOffice_36_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_36_span">重庆中明港桥环保有限责任公司</span></a></li>
+                                            <li id="treeOffice_37" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_37_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_37_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆拉法基瑞安地维水泥有限公司"><span
+                                                    id="treeOffice_37_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_37_span">重庆拉法基瑞安地维水泥有限公司</span></a></li>
+                                            <li id="treeOffice_38" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_38_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_38_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆九腾环保工程有限公司"><span
+                                                    id="treeOffice_38_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_38_span">重庆九腾环保工程有限公司</span></a></li>
+                                            <li id="treeOffice_39" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_39_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_39_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆油润再生资源开发有限公司"><span
+                                                    id="treeOffice_39_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_39_span">重庆油润再生资源开发有限公司</span></a></li>
+                                            <li id="treeOffice_40" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_40_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_40_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市万州区均荣再生资源回收站"><span
+                                                    id="treeOffice_40_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_40_span">重庆市万州区均荣再生资源回收站</span></a></li>
+                                            <li id="treeOffice_41" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_41_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_41_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市万州区众汇再生资源回收有限责任公司"><span
+                                                    id="treeOffice_41_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_41_span">重庆市万州区众汇再生资源回收有限责任公司</span></a></li>
+                                            <li id="treeOffice_42" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_42_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_42_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市万州区新聚源再生资源回收有限责任公司"><span
+                                                    id="treeOffice_42_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_42_span">重庆市万州区新聚源再生资源回收有限责任公司</span></a></li>
+                                            <li id="treeOffice_43" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_43_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_43_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市涪陵区王丰废旧物资回收有限公司"><span
+                                                    id="treeOffice_43_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_43_span">重庆市涪陵区王丰废旧物资回收有限公司</span></a></li>
+                                            <li id="treeOffice_44" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_44_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_44_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆天思博瑞环保科技发展有限公司"><span
+                                                    id="treeOffice_44_ico" title="" treenode_ico=""
+                                                    class="button cusicon ace-icon ico fa fa-folder"
+                                                    style=""></span><span
+                                                    id="treeOffice_44_span">重庆天思博瑞环保科技发展有限公司</span></a></li>
+                                            <li id="treeOffice_45" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_45_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_45_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="利特运输"><span
+                                                    id="treeOffice_45_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_45_span">利特运输</span></a></li>
+                                            <li id="treeOffice_46" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_46_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_46_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="企业产废"><span
+                                                    id="treeOffice_46_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_46_span">企业产废</span></a></li>
+                                            <li id="treeOffice_47" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_47_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_47_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="企业运输"><span
+                                                    id="treeOffice_47_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_47_span">企业运输</span></a></li>
+                                            <li id="treeOffice_48" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_48_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_48_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="企业处置"><span
+                                                    id="treeOffice_48_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_48_span">企业处置</span></a></li>
+                                            <li id="treeOffice_49" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_49_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_49_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="固管家运输方测试机构"><span
+                                                    id="treeOffice_49_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_49_span">固管家运输方测试机构</span></a></li>
+                                            <li id="treeOffice_50" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_50_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_50_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="固管家产废方测试机构"><span
+                                                    id="treeOffice_50_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_50_span">固管家产废方测试机构</span></a></li>
+                                            <li id="treeOffice_51" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_51_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_51_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="固管家处置方测试机构"><span
+                                                    id="treeOffice_51_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_51_span">固管家处置方测试机构</span></a></li>
+                                            <li id="treeOffice_52" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_52_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_52_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆环投再生资源有限公司"><span
+                                                    id="treeOffice_52_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_52_span">重庆环投再生资源有限公司</span></a></li>
+                                            <li id="treeOffice_53" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_53_switch" title=""
+                                                                  class="button level0 switch center_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_53_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="固管家服务平台"><span
+                                                    id="treeOffice_53_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_53_span">固管家服务平台</span></a></li>
+                                            <li id="treeOffice_54" class="level0" tabindex="0" hidefocus="true"
+                                                treenode=""><span id="treeOffice_54_switch" title=""
+                                                                  class="button level0 switch bottom_docu"
+                                                                  treenode_switch=""></span><a id="treeOffice_54_a"
+                                                                                               class="level0"
+                                                                                               treenode_a="" onclick=""
+                                                                                               target="_blank" style=""
+                                                                                               title="重庆市环境保护局"><span
+                                                    id="treeOffice_54_ico" title="" treenode_ico=""
+                                                    class="button ico_docu" style=""></span><span
+                                                    id="treeOffice_54_span">重庆市环境保护局</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-4 pricing-box">
+                            <div class="widget-box widget-color-blue">
+                                <div class="widget-header">
+                                    <h5 class="widget-title bigger lighter">待选人员</h5>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main" id="dxuser">
+                                        <label v-for="u in companyUsers">
+                                            <!--
+                                            vue中，checkbox、radio、select被选中规则：
+                                            1.value值与  v-model绑定属性值一致，自动选中
+                                            2.v-model直接是一个boolean值   true则选中
+                                            -->
+                                            <input class="ace ace-checkbox-2" type="checkbox"
+                                                    v-model="u.show"
+                                                   name="userIds" @click="changedxUser(u.id)">
+                                            <span class="lbl"> {{u.name}}</span>
+                                        </label>
+                                    </div>
+                                    <div class="hide" id="addUserBtn">
+                                        <a href="javascript:void(0);" @click="addUser()" class="btn btn-block btn-primary">
+                                            <i class="ace-icon fa fa-plus bigger-110"></i>
+                                            <span>添加所选人员</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-4 pricing-box">
+                            <div class="widget-box widget-color-green">
+                                <div class="widget-header">
+                                    <h5 class="widget-title bigger lighter">已选人员</h5>
+                                </div>
+
+                                <div class="widget-body">
+                                    <form action="role/saveuser" method="post" id="role-user-form">
+                                        <div class="widget-main" id="yxuser">
+                                            <div class="checkbox">
+                                                <span v-for="(u,index) in yxUsers">
+														<label >
+															<!--
+															checkbox有两种选中方式：
+															1.vue的v-model的值与  checkbox的value一致
+															2.vue的v-model的值 是true  checkbox没有value  也是被选中
+															-->
+															<input class="ace ace-checkbox-2" @click="changeyxUser(u.id)" :id="u.id" type="checkbox" name="userIds" v-model="u.show">
+															<span class="lbl"> {{u.name}}</span>
+														</label>
+														<span v-if="(index+1)%2==0">
+																<br>
+														</span>
+													</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="hide" id="removeUserBtn">
+                                        <a href="javascript:void(0);" class="btn btn-block btn-success" @click="deleteUser()">
+                                            <i class="ace-icon fa fa-trash bigger-110"></i>
+                                            <span>移除人员</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width-100 clearfix" tag-save-btn=""
+                         style="bottom: -36px; left: 0px; position: absolute;">
+	<span class="btn btn-primary btn-sm bigger-110 width-50  pull-left" id="role-user-form-save">
+		<i class="ace-icon fa fa-floppy-o align-top bigger-125"></i> 确认分配
+	</span>
+                        <span class="btn btn-yellow btn-sm bigger-110 width-50 pull-right" id="role-user-form-cancel">
+		<i class="ace-icon fa fa-times align-top  bigger-125"></i> 取 消
+	</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div><!-- /.page-content -->
+
+    </div><!-- /.main-content -->
+
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse" style="z-index:1111">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- 底部 -->
+<!-- basic scripts -->
+
+<script src="static/bootstrap/bootstrap.min.js"></script>
+<!-- ace scripts -->
+<script src="static/ace/js/ace-elements.min.js"></script>
+<script src="static/ace/js/ace.min.js"></script>
+<script type="text/javascript">
+    try {
+        ace.settings.check('navbar', 'fixed')
+    } catch (e) {
+    }
+    try {
+        ace.settings.check('main-container', 'fixed')
+    } catch (e) {
+    }
+    try {
+        ace.settings.check('sidebar', 'fixed')
+    } catch (e) {
+    }
+    try {
+        ace.settings.check('sidebar', 'collapsed')
+    } catch (e) {
+    }
+    try {
+        ace.settings.check('breadcrumbs', 'fixed')
+    } catch (e) {
+    }
+    $(function () {
+        $("#sidebar").load("common/sidebar.html");
+        $("#navbar").load("common/navbar.html");
+    })
+
+</script>
+
+<!-- 引入其他js -->
+<script src="static/js/history.js"></script>
+<script type="text/javascript" src="static/layer/layer.js"></script>
+<script type="text/javascript" src="static/js/spin.min.js"></script>
+<script type="text/javascript" src="static/ztree/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.autosize.min.js"></script>
+<script type="text/javascript" src="static/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="static/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="static/js/jquery.form.js"></script>
+<script type="text/javascript" src="static/js/bootstrap-contextmenu.js"></script>
+<script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="static/js/public.js"></script>
+<script type="text/javascript" src="static/vue/vue.js"></script>
+<script type="text/javascript" src="static/vue/axios.js"></script>
+
+<script type="text/javascript" src="static/js/role/user.js"></script>
+
+</body>
+</html>
